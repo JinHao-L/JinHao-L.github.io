@@ -10,18 +10,12 @@ jobs:
     environment: github-pages
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        bun-version: [1.x] # We will deploy with only one version of bun
-
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Use bun ${{ matrix.bun-version }} 🍞
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: ${{ matrix.bun-version }}
+        uses: oven-sh/setup-bun@v2
 
       - name: Install 🔧
         run: bun install --frozen-lockfile
