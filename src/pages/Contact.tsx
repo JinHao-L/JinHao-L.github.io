@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { Transition } from '@headlessui/react';
-import { useFormik, FormikHelpers } from 'formik';
+import { FormikHelpers, useFormik } from 'formik';
 import React, { useEffect, useState } from 'react';
 import * as yup from 'yup';
 import Section, { SectionProps } from '~/components/Section';
@@ -83,14 +83,15 @@ const Contact: React.FC<SectionProps> = ({ id, style, className, nextId }) => {
     >
       <SectionHeader>Contact Me</SectionHeader>
       <div className="container flex flex-col items-center justify-center flex-1 px-2 pt-2 pb-5 m-auto sm:pt-10 lg:px-40 xl:px-64 2xl:px-96">
-        <div className="w-full px-6 py-8 text-black bg-gray-300 rounded shadow-md opacity-90">
+        <div className="w-full px-6 py-8 text-black bg-gray-300 rounded-sm shadow-md opacity-90">
           <h1 className="mb-8 text-3xl text-center">Leave me a message! 📬</h1>
           <form onSubmit={formik.handleSubmit} noValidate>
             <label htmlFor="name">Name</label>
             <input
               type="name"
               id="name"
-              className="block w-full p-3 mt-1 border rounded border-grey-light"
+              autoComplete='name'
+              className="block w-full p-3 mt-1 border rounded-sm border-gray-200 bg-white"
               placeholder="Your preferred form of address"
               {...formik.getFieldProps('name')}
             />
@@ -104,7 +105,8 @@ const Contact: React.FC<SectionProps> = ({ id, style, className, nextId }) => {
             <input
               type="email"
               id="email"
-              className="block w-full p-3 border rounded border-grey-light"
+              autoComplete='email'
+              className="block w-full p-3 border rounded-sm border-gray-200 bg-white"
               placeholder="Your email"
               {...formik.getFieldProps('email')}
             />
@@ -117,7 +119,7 @@ const Contact: React.FC<SectionProps> = ({ id, style, className, nextId }) => {
             <label htmlFor="message">Message</label>
             <textarea
               id="message"
-              className="block w-full p-3 mt-1 border rounded border-grey-light"
+              className="block w-full p-3 mt-1 border rounded-sm border-gray-200 bg-white"
               placeholder="Leave me a message"
               cols={40}
               rows={5}
@@ -132,7 +134,7 @@ const Contact: React.FC<SectionProps> = ({ id, style, className, nextId }) => {
             <button
               disabled={submitted || formik.isSubmitting}
               type={'submit'}
-              className="flex flex-row justify-center w-full py-3 mt-1 text-xl text-center text-white bg-green-600 rounded place-items-center disabled:opacity-50 disabled:bg-green-600 hover:bg-green-500 focus:outline-none"
+              className="flex flex-row justify-center w-full py-3 mt-1 text-xl text-center text-white bg-green-600 rounded-sm place-items-center disabled:opacity-50 disabled:bg-green-600 hover:bg-green-500 focus:outline-hidden"
             >
               {formik.isSubmitting && (
                 <svg
@@ -170,10 +172,10 @@ const Contact: React.FC<SectionProps> = ({ id, style, className, nextId }) => {
             >
               <div
                 className={
-                  'p-4 rounded-b-xl w-full text-center bg-yellow-400/30 border-2 border-t-0 border-yellow-400 border-opacity-50'
+                  'p-4 rounded-b-xl w-full text-center bg-yellow-400/30 border-2 border-t-0 border-yellow-400/50'
                 }
               >
-                Email sent successfully! Thank you for your feedback!
+                Email sent successfully! Thank you for reaching out!
                 <br />I will reach out to you as soon as I can.
               </div>
             </Transition>

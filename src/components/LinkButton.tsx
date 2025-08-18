@@ -15,7 +15,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ url, disabled, disabledHint, ch
       <Hoverable
         hoverText={disabledHint || 'Site is no longer live :('}
         canHover={!!disabled}
-        className="px-4 py-2 mx-3 my-1 font-normal text-white bg-transparent border border-white rounded hover:bg-titan-white-500 hover:text-gray-800 hover:border-transparent cursor-not-allowed"
+        className="px-4 py-2 mx-3 my-1 font-normal text-white bg-transparent border border-white rounded-sm hover:bg-titan-white-500 hover:text-gray-800 hover:border-transparent cursor-not-allowed"
       >
         {children}
       </Hoverable>
@@ -23,8 +23,8 @@ const LinkButton: React.FC<LinkButtonProps> = ({ url, disabled, disabledHint, ch
   }
 
   return (
-    <a target="_blank" href={url} rel="noreferrer">
-      <button className="px-4 py-2 mx-3 my-1 font-normal text-white bg-transparent border border-white rounded hover:bg-titan-white-500 hover:text-gray-800 hover:border-transparent">
+    <a target="_blank" href={url} rel="noreferrer" tabIndex={-1}>
+      <button className="px-4 py-2 mx-3 my-1 font-normal text-white bg-transparent border border-white rounded-sm hover:bg-titan-white-500 hover:text-gray-800 hover:border-transparent">
         {children}
       </button>
     </a>

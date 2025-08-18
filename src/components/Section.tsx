@@ -27,7 +27,7 @@ const Section: React.FC<SectionProps> = ({
       className={`pt-4 px-8 m-0 flex flex-col  ${className || ''}`}
       style={{ minHeight: minHeight, ...style }}
     >
-      <div className="items-start flex-grow overflow-x-hidden">{children}</div>
+      <div className="items-start grow overflow-x-hidden">{children}</div>
       {nextId && <Divider scrollTarget={nextId} className={'relative bottom-5'} />}
     </Element>
   );

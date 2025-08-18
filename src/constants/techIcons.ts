@@ -1,6 +1,6 @@
 import {
   SiAdobexd,
-  SiAmazonaws,
+  SiAmazonwebservices,
   SiApachekafka,
   SiBinance,
   SiCodemirror,
@@ -40,13 +40,13 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiVim,
-  SiVisualstudio,
   SiWebpack,
   SiZoom,
   SiJest,
   SiMobx,
 } from 'react-icons/si';
 import { FcLinux } from 'react-icons/fc';
+import { DiVisualstudio } from 'react-icons/di';
 import JavaSvg from '~/assets/logo/java.svg?react';
 import EthersSvg from '~/assets/logo/ethers.svg?react';
 import SwitcheoSvg from '~/assets/logo/swth.svg?react';
@@ -98,7 +98,7 @@ export const GRADLE_ICON = { Icon: SiGradle, name: 'Gradle', color: '#0FA4CC' };
 export const EXPRESS_ICON = { Icon: SiExpress, name: 'ExpressJS', color: '#ffffff' };
 export const KAFKA_ICON = { Icon: SiApachekafka, name: 'Apache Kafka', color: '#D3D3D3' };
 export const K8S_ICON = { Icon: SiKubernetes, name: 'Kubernetes', color: '#326ce5' };
-export const AWS_ICON = { Icon: SiAmazonaws, name: 'AWS Services', color: '#FF9900' };
+export const AWS_ICON = { Icon: SiAmazonwebservices, name: 'AWS Services', color: '#FF9900' };
 export const MONGO_ICON = { Icon: SiMongodb, name: 'MongoDB', color: '#3FA037' };
 export const IONIC_ICON = { Icon: SiIonic, name: 'Ionic', color: '#498AFF' };
 export const WEBPACK_ICON = { Icon: SiWebpack, name: 'Webpack', color: '#1c78c0' };
@@ -107,7 +107,7 @@ export const RUBY_ICON = { Icon: SiRubyonrails, name: 'Ruby on Rails', color: '#
 export const VIM_ICON = { Icon: SiVim, name: 'Vim', color: '#029833' };
 export const GITHUB_ICON = { Icon: SiGithub, name: 'Github', color: '#f34f29' };
 export const GIT_ICON = { Icon: SiGit, name: 'Git', color: '#f34f29' };
-export const VSCODE_ICON = { Icon: SiVisualstudio, name: 'VS Code', color: '#0078d7' };
+export const VSCODE_ICON = { Icon: DiVisualstudio, name: 'VS Code', color: '#0078d7' };
 export const DOCKER_ICON = { Icon: SiDocker, name: 'Docker', color: '#0db7ed' };
 export const LINUX_ICON = { Icon: FcLinux, name: 'Linux (Ubuntu)' };
 export const POSTMAN_ICON = { Icon: SiPostman, name: 'Postman', color: '#F15A24' };
@@ -147,32 +147,18 @@ export const BINANCE_ICON = {
   color: '#F0B90B',
   link: 'https://github.com/bnb-chain/javascript-sdk',
 };
-export const ETHEREUM_ICON = {
-  Icon: EthersSvg,
-  name: 'Ethers',
-  link: 'https://docs.ethers.io/',
-};
+export const ETHEREUM_ICON = { Icon: EthersSvg, name: 'Ethers', link: 'https://docs.ethers.io/' };
 export const SWITCHEO_ICON = {
   Icon: SwitcheoSvg,
   name: 'Switcheo Tradehub',
   link: 'https://github.com/Switcheo/tradehub-api-js',
 };
 
-export const CHROME_ICON = {
-  Icon: ChromeSvg,
-  name: 'Chrome Extension',
-};
+export const CHROME_ICON = { Icon: ChromeSvg, name: 'Chrome Extension' };
 
-export const RXJS_ICON = {
-  Icon: RxjsSvg,
-  name: 'RxJS',
-  link: 'https://rxjs.dev/',
-};
+export const RXJS_ICON = { Icon: RxjsSvg, name: 'RxJS', link: 'https://rxjs.dev/' };
 
-export const JENKINS_ICON = {
-  Icon: JenkinsSvg,
-  name: 'Jenkins',
-};
+export const JENKINS_ICON = { Icon: JenkinsSvg, name: 'Jenkins' };
 
 export const MOBX_ICON = {
   Icon: SiMobx,

@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
               href={GITHUB_SOCIAL.link}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center p-2 text-gray-800 transition-colors bg-gray-100 rounded-md hover:bg-gray-800 hover:text-titan-white-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-titan-white-200"
+              className="inline-flex items-center justify-center p-2 text-gray-800 transition-colors bg-gray-100 rounded-md hover:bg-gray-800 hover:text-titan-white-200 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-titan-white-200"
             >
               <span className="sr-only">Open github</span>
               <Icon className="m-auto" size={30} />
@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 text-gray-800 transition-colors bg-gray-100 rounded-md hover:bg-gray-800 hover:text-titan-white-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-titan-white-200"
+              className="inline-flex items-center justify-center p-2 text-gray-800 transition-colors bg-gray-100 rounded-md hover:bg-gray-800 hover:text-titan-white-200 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-titan-white-200"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >

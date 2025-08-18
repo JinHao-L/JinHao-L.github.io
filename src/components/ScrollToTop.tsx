@@ -8,7 +8,7 @@ const ScrollToTop: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    let debounceTimer: NodeJS.Timeout;
+    let debounceTimer: ReturnType<typeof setTimeout>;
     const toggleVisible = () => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => {
@@ -35,7 +35,7 @@ const ScrollToTop: React.FC = () => {
       onClick={() => {
         animateScroll.scrollToTop({ duration: 500, smooth: true });
       }}
-      className={`${dynamicClassName} fixed bottom-6 items-center flex justify-center right-6 p-0 w-12 h-12 md:bottom-10 bg-${COLOR}-500 rounded-full z-50 hover:bg-${COLOR}-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none`}
+      className={`${dynamicClassName} fixed bottom-6 items-center flex justify-center right-6 p-0 w-12 h-12 md:bottom-10 bg-${COLOR}-500 rounded-full z-50 hover:bg-${COLOR}-700 active:shadow-lg mouse shadow-sm transition ease-in duration-200 focus:outline-hidden`}
     >
       <MdKeyboardArrowUp size={30} />
     </button>

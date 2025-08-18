@@ -6,13 +6,14 @@ export type HoverIconProps = {
   className?: string;
   canHover?: boolean;
   children: React.ReactNode;
-};
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Hoverable: React.FC<HoverIconProps> = ({
   hoverText,
   className,
   children,
   canHover = true,
+  ...buttonProps
 }) => {
   const [tooltipShow, setTooltipShow] = React.useState(false);
   const btnRef = createRef<HTMLButtonElement>();
@@ -44,6 +45,7 @@ const Hoverable: React.FC<HoverIconProps> = ({
         onTouchEnd={canHover ? closeTooltip : undefined}
         ref={btnRef}
         className={className}
+        {...buttonProps}
       >
         {children}
       </button>

@@ -1,6 +1,59 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* === Custom theme for Tailwind v4 === */
+@theme {
+  /* --- titan-white palette --- */
+  --color-titan-white-50:  #FFFFFF;
+  --color-titan-white-100: #FFFFFF;
+  --color-titan-white-200: #FFFFFF;
+  --color-titan-white-300: #FFFFFF;
+  --color-titan-white-400: #FFFFFF;
+  --color-titan-white-500: #F8F8FF; /* DEFAULT in v3 → 500 here */
+  --color-titan-white-600: #C0C0FF;
+  --color-titan-white-700: #8888FF;
+  --color-titan-white-800: #5050FF;
+  --color-titan-white-900: #1818FF;
+
+  /* optional alias so bg-titan-white works without a shade */
+  --color-titan-white: var(--color-titan-white-500);
+
+  /* --- pale-sky palette --- */
+  --color-pale-sky-50:  #CDD0D5;
+  --color-pale-sky-100: #C2C5CC;
+  --color-pale-sky-200: #ACB0BA;
+  --color-pale-sky-300: #969BA7;
+  --color-pale-sky-400: #7F8694;
+  --color-pale-sky-500: #6B7280;   /* DEFAULT in v3 → 500 here */
+  --color-pale-sky-600: #515761;
+  --color-pale-sky-700: #383C43;
+  --color-pale-sky-800: #1E2024;
+  --color-pale-sky-900: #050506;
+
+  /* optional alias */
+  --color-pale-sky: var(--color-pale-sky-500);
+
+  /* --- animation (v4 uses --animate-* tokens) --- */
+  --animate-wave: wave 1.5s infinite;
+
+  /* Define keyframes inside @theme so Tailwind includes them */
+  @keyframes wave {
+    0%   { transform: rotate(0deg); }
+    15%  { transform: rotate(14deg); }
+    30%  { transform: rotate(-8deg); }
+    40%  { transform: rotate(14deg); }
+    50%  { transform: rotate(-4deg); }
+    60%  { transform: rotate(10deg); }
+    70%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 .particles-js canvas {
   display: block;
