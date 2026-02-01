@@ -3,30 +3,30 @@
 /* === Custom theme for Tailwind v4 === */
 @theme {
   /* --- titan-white palette --- */
-  --color-titan-white-50:  #FFFFFF;
-  --color-titan-white-100: #FFFFFF;
-  --color-titan-white-200: #FFFFFF;
-  --color-titan-white-300: #FFFFFF;
-  --color-titan-white-400: #FFFFFF;
-  --color-titan-white-500: #F8F8FF; /* DEFAULT in v3 → 500 here */
-  --color-titan-white-600: #C0C0FF;
-  --color-titan-white-700: #8888FF;
-  --color-titan-white-800: #5050FF;
-  --color-titan-white-900: #1818FF;
+  --color-titan-white-50: #ffffff;
+  --color-titan-white-100: #ffffff;
+  --color-titan-white-200: #ffffff;
+  --color-titan-white-300: #ffffff;
+  --color-titan-white-400: #ffffff;
+  --color-titan-white-500: #f8f8ff; /* DEFAULT in v3 → 500 here */
+  --color-titan-white-600: #c0c0ff;
+  --color-titan-white-700: #8888ff;
+  --color-titan-white-800: #5050ff;
+  --color-titan-white-900: #1818ff;
 
   /* optional alias so bg-titan-white works without a shade */
   --color-titan-white: var(--color-titan-white-500);
 
   /* --- pale-sky palette --- */
-  --color-pale-sky-50:  #CDD0D5;
-  --color-pale-sky-100: #C2C5CC;
-  --color-pale-sky-200: #ACB0BA;
-  --color-pale-sky-300: #969BA7;
-  --color-pale-sky-400: #7F8694;
-  --color-pale-sky-500: #6B7280;   /* DEFAULT in v3 → 500 here */
+  --color-pale-sky-50: #cdd0d5;
+  --color-pale-sky-100: #c2c5cc;
+  --color-pale-sky-200: #acb0ba;
+  --color-pale-sky-300: #969ba7;
+  --color-pale-sky-400: #7f8694;
+  --color-pale-sky-500: #6b7280; /* DEFAULT in v3 → 500 here */
   --color-pale-sky-600: #515761;
-  --color-pale-sky-700: #383C43;
-  --color-pale-sky-800: #1E2024;
+  --color-pale-sky-700: #383c43;
+  --color-pale-sky-800: #1e2024;
   --color-pale-sky-900: #050506;
 
   /* optional alias */
@@ -37,40 +37,36 @@
 
   /* Define keyframes inside @theme so Tailwind includes them */
   @keyframes wave {
-    0%   { transform: rotate(0deg); }
-    15%  { transform: rotate(14deg); }
-    30%  { transform: rotate(-8deg); }
-    40%  { transform: rotate(14deg); }
-    50%  { transform: rotate(-4deg); }
-    60%  { transform: rotate(10deg); }
-    70%  { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(14deg);
+    }
+    30% {
+      transform: rotate(-8deg);
+    }
+    40% {
+      transform: rotate(14deg);
+    }
+    50% {
+      transform: rotate(-4deg);
+    }
+    60% {
+      transform: rotate(10deg);
+    }
+    70% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 }
 
 @layer base {
   button:not(:disabled),
-  [role="button"]:not(:disabled) {
+  [role='button']:not(:disabled) {
     cursor: pointer;
   }
-}
-
-.particles-js canvas {
-  display: block;
-  vertical-align: bottom;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
-  -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
-  transition: opacity 0.8s ease, transform 1.4s ease;
-}
-
-.particles-js {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -10;
-  top: 0;
-  left: 0;
 }

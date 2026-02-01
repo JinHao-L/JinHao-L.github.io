@@ -29,7 +29,6 @@ export default defineConfig({
         sanitizeFileName: true,
         manualChunks(id) {
           if (!id.includes('node_modules')) return;
-          if (id.includes('tsparticles')) return 'particles';
           if (id.includes('lightbox')) return 'lightbox';
           if (id.includes('react-icons')) return 'icons';
           if (/yup|formik/.test(id)) return 'form';
