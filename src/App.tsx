@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import React from 'react';
 
@@ -15,6 +16,7 @@ import '~/App.css';
 const App: React.FC = () => {
   return (
     <div>
+      <Analytics />
       <SpeedInsights />
       <AppNavBar />
       <div className="text-white bg-gray-900">
