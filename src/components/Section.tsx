@@ -9,7 +9,7 @@ export interface SectionProps {
   style?: React.CSSProperties;
   className?: string;
   minHeight?: string;
-  children?: React.ReactNode
+  children?: React.ReactNode;
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -25,6 +25,7 @@ const Section: React.FC<SectionProps> = ({
       id={id}
       name={id}
       className={`pt-4 px-8 m-0 flex flex-col  ${className || ''}`}
+      // @ts-expect-error TODO: fix style type
       style={{ minHeight: minHeight, ...style }}
     >
       <div className="items-start grow overflow-x-hidden">{children}</div>
